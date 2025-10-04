@@ -1,0 +1,213 @@
+/* Mobile-first approach */
+.mobile-menu-btn {
+  display: flex;
+}
+.desktop-nav-links {
+  display: none;
+}
+.nav-button-text-full {
+  display: none;
+}
+.nav-button-text-short {
+  display: inline;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+  .desktop-nav-links {
+    display: flex;
+  }
+  .nav-button-text-full {
+    display: inline;
+  }
+  .nav-button-text-short {
+    display: none;
+  }
+  .nav-action-btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Mobile button sizing */
+.nav-action-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+/* Small screens - show partial text */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .nav-button-text-short {
+    display: none;
+  }
+  .nav-button-text-full {
+    display: inline;
+  }
+}
+
+/* Tailwind Breakpoint Definitions (Approximate) */
+/* sm: min-width: 640px */
+/* md: min-width: 768px */
+/* lg: min-width: 1024px */
+/* xl: min-width: 1280px */
+
+/* --- FINAL TITLE (h2) --- */
+
+.final-title {
+  /* Base: text-3xl, mb-4 */
+  font-size: 1.875rem; /* 30px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+@media (min-width: 640px) {
+  /* sm:text-4xl, sm:mb-6 */
+  .final-title {
+    font-size: 2.25rem; /* 36px */
+    margin-bottom: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 768px) {
+  /* md:text-5xl, md:mb-8 */
+  .final-title {
+    font-size: 3rem; /* 48px */
+    margin-bottom: 2rem; /* 32px */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg:text-6xl */
+  .final-title {
+    font-size: 3.75rem; /* 60px */
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl:text-7xl */
+  .final-title {
+    font-size: 4.5rem; /* 72px */
+  }
+}
+
+/* --- FINAL PARAGRAPH (p) --- */
+
+.final-paragraph {
+  /* Base: text-sm, mb-6 */
+  font-size: 0.875rem; /* 14px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+@media (min-width: 640px) {
+  /* sm:text-base, sm:mb-8 */
+  .final-paragraph {
+    font-size: 1rem; /* 16px */
+    margin-bottom: 2rem; /* 32px */
+  }
+}
+
+@media (min-width: 768px) {
+  /* md:text-lg, md:mb-12 */
+  .final-paragraph {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg:text-xl */
+  .final-paragraph {
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl:text-2xl */
+  .final-paragraph {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* --- FINAL BUTTON --- */
+
+/* Base styles for the button (padding, font size, icon size, gap) */
+.group.relative {
+  /* Base: px-6 py-3, text-base, gap-2 */
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  font-size: 1rem; /* 16px */
+}
+
+.group .relative.z-10.flex.items-center.gap-2 {
+  gap: 0.5rem; /* 8px */
+}
+
+.final-rocket {
+  /* Base: w-4 h-4 */
+  width: 1rem;
+  height: 1rem;
+}
+
+.final-button-text-desktop {
+  /* sm:inline, hidden */
+  display: none;
+}
+
+.final-button-text-mobile {
+  /* sm:hidden */
+  display: inline;
+}
+
+@media (min-width: 640px) {
+  /* sm:px-8 sm:py-4, sm:text-lg, sm:gap-3 */
+  .group.relative {
+    padding: 1rem 2rem; /* 16px 32px */
+    font-size: 1.125rem; /* 18px */
+  }
+  .group .relative.z-10.flex.items-center.gap-2 {
+    gap: 0.75rem; /* 12px */
+  }
+  .final-rocket {
+    /* sm:w-5 sm:h-5 */
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .final-button-text-desktop {
+    /* sm:inline */
+    display: inline;
+  }
+  .final-button-text-mobile {
+    /* sm:hidden */
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md:px-12 md:py-5, md:text-xl, md:gap-4 */
+  .group.relative {
+    padding: 1.25rem 3rem; /* 20px 48px */
+    font-size: 1.25rem; /* 20px */
+  }
+  .group .relative.z-10.flex.items-center.gap-2 {
+    gap: 1rem; /* 16px */
+  }
+  .final-rocket {
+    /* md:w-6 md:h-6 */
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg:px-16 lg:py-6, lg:text-2xl */
+  .group.relative {
+    padding: 1.5rem 4rem; /* 24px 64px */
+    font-size: 1.5rem; /* 24px */
+  }
+  .final-rocket {
+    /* lg:w-8 lg:h-8 */
+    width: 2rem;
+    height: 2rem;
+  }
+}
