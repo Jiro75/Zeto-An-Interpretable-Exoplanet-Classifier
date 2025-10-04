@@ -157,7 +157,7 @@ npm start
 - Transit Duration (hours)
 - Stellar Temperature (Kelvin)
 - Stellar Radius (solar radii)
-- Signal-to-Noise Ratio
+- Insolation Flux (Earth Flux)
 ```
 
 ---
