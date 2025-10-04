@@ -30,7 +30,7 @@
 
 ### The Problem We're Solving
 
-Space telescopes like Kepler, K2, and TESS generate massive amounts of data daily. Currently, astrophysicists must manually vet each transit signal to distinguish genuine exoplanets from false positives—a bottleneck that:
+Space telescopes like Kepler, K2, and TESS generate massive amounts of data daily. Currently, astrophysicists must manually vet each transit signal to distinguish genuine exoplanets from false positives, a bottleneck that:
 - **Slows down discovery** of potentially habitable worlds
 - **Risks overlooking** novel exoplanets buried in data
 - **Limits accessibility** for students and enthusiasts wanting to explore exoplanet science
@@ -51,7 +51,7 @@ Zeto provides a **dual-input system** combining cutting-edge ML with an intuitiv
 ### 🧠 Intelligent Classification Engine
 - **Ensemble Machine Learning** models (Random Forest, Gradient Boosting)
 - Trained on consolidated datasets from Kepler, K2, and TESS missions
-- **96-98% accuracy** with rigorous cross-validation
+- **86-88% accuracy** with rigorous cross-validation
 - Interpretable predictions using SHAP values
 
 ### 🌐 Interactive Web Platform
@@ -114,7 +114,7 @@ cd backend
 
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -122,8 +122,6 @@ pip install -r requirements.txt
 # Run the Flask server
 python app.py
 ```
-
-The backend API will be available at `http://localhost:5000`
 
 ### Frontend Setup
 ```bash
@@ -137,8 +135,6 @@ npm install
 npm start
 ```
 
-The frontend will be available at `http://localhost:3000`
-
 ---
 
 ## 🎯 Usage
@@ -151,9 +147,8 @@ The frontend will be available at `http://localhost:3000`
 
 ### For Students & Enthusiasts
 1. **Chat Interface**: Click on the chatbot icon
-2. **Guided Input**: Answer conversational questions about your celestial object
-3. **Discover**: Receive classification results with educational explanations
-4. **Learn**: Explore what makes a planet potentially habitable
+2. **Discover**: Receive classification results with comprehensive analysis
+3. **Learn**: Explore what makes a planet potentially habitable
 
 ### Example Input Features
 ```
@@ -172,11 +167,11 @@ The frontend will be available at `http://localhost:3000`
 ### 1. Data Consolidation & Feature Engineering
 - Merged tabular datasets from Kepler, K2, and TESS missions
 - Cleaned and normalized cross-mission data
-- Selected 15-20 most predictive features
+- Selected most predictive features
 - Handled extreme class imbalance
 
 ### 2. Model Training & Validation
-- Trained ensemble methods (Random Forest, Gradient Boosting)
+- Trained ensemble methods (XGBoost)
 - Rigorous cross-validation across different missions
 - SHAP analysis for model interpretability
 - Optimized for both accuracy and speed
@@ -196,7 +191,7 @@ The frontend will be available at `http://localhost:3000`
 
 ## 📊 Performance
 
-- **Accuracy**: 96-98% on validation sets
+- **Accuracy**: 86-88% on validation sets
 - **Speed**: Classification in <1 second per object
 - **Scalability**: Batch processing of 1000+ objects
 - **Cross-Mission Reliability**: Consistent performance across Kepler, K2, and TESS data
@@ -255,11 +250,6 @@ We welcome contributions from the community! Whether you're fixing bugs, improvi
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
-
-## 📄 License
-
-This project was developed for the NASA Space Apps Challenge 2024. Please refer to NASA's data usage policies for dataset licensing.
 
 ---
 
@@ -276,14 +266,14 @@ This project was developed for the NASA Space Apps Challenge 2024. Please refer 
 
 For questions, feedback, or collaboration opportunities:
 - **Team**: The Exo-Topians
-- **Event**: NASA Space Apps Cairo 2024
+- **Event**: NASA Space Apps Cairo 2025
 - **Challenge**: A World Away: Hunting for Exoplanets with AI
 
 ---
 
 <div align="center">
 
-**Made with 💫 by The Exo-Topians**
+**Made with ❤️ by The Exo-Topians**
 
 *Bringing the universe a little closer to everyone*
 
